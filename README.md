@@ -57,7 +57,7 @@ Criar a **HealthCheck** me ajudou a reforçar a importância de:
 
 **Gabriela Neves**  
 📍 Salvador - BA  
-💬 _“Projeto criado para praticar lógica, responsividade e boas práticas de código — mostrando que o essencial bem feito é o que realmente faz diferença.”_
+💬 _“Projeto criado para praticar lógica, responsividade e boas práticas de código, mostrando que o essencial bem feito é o que realmente faz diferença.”_
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-000?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriela-neves-oliveira/)
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nevesgno)
