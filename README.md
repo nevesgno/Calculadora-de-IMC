@@ -4,7 +4,7 @@ Olá! Cansado de calculadoras de IMC genéricas? Eu também! 😉
 
 Essa é a **HealthCheck**, uma ferramenta simples, mas cheia de personalidade, que criei para acompanhar a saúde de forma mais dinâmica e visualmente agradável.
 
-Aqui não tem segredo, só **HTML, CSS e JavaScript**, tudo pensado para ser rápido, funcional e, o mais importante, **fácil de usar em qualquer tela**, do celular ao desktop.
+Aqui não tem segredo, só **HTML, CSS e JavaScript Vanilla**, tudo pensado para ser rápido, funcional e, o mais importante, **fácil de usar em qualquer tela**, do celular ao desktop.
 
 ![Calculadora de IMC](https://github.com/nevesgno/Calculadora-de-IMC/blob/main/Calculadora%20de%20IMC.png?raw=true)
 
@@ -14,7 +14,7 @@ Aqui não tem segredo, só **HTML, CSS e JavaScript**, tudo pensado para ser rá
 
 A ideia foi ir além do cálculo simples. Confere só os diferenciais:
 
-- 🎨 **Temas por Gênero:** a interface muda de cor dinamicamente — azul vibrante (Masculino) ou rosa moderno (Feminino) — dando um toque de personalização imediata.  
+- 🎨 **Temas por Gênero:** a interface muda de cor dinamicamente, azul vibrante (Masculino) ou rosa moderno (Feminino), dando um toque de personalização imediata.  
 - 🌍 **Modo Duplo de Medida:** alterne facilmente entre o sistema **Métrico (kg/cm)** e **Imperial (lbs/ft)**, atendendo a todas as necessidades.  
 - 💡 **Resultado Visual e Claro:** o cálculo aparece em destaque e sua classificação (Abaixo do Peso, Saudável, Obesidade, etc.) é realçada conforme a **tabela da OMS (Organização Mundial da Saúde)**.  
 - 📱 **Design Responsivo de Verdade:** construído com **CSS customizado** e princípios do Tailwind, garantindo um layout limpo e adaptável em qualquer dispositivo.  
