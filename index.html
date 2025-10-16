@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - HealthCheck</title>
+    <!-- Carrega Tailwind CSS para a base -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carrega a fonte Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para o arquivo de estilos customizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-4 sm:p-8">
+    <!-- Card Principal (Centrado na tela) -->
+    <div class="card rounded-xl overflow-hidden">
+        
+        <!-- 1. Área de Resultados (Início) -->
+        <div id="result-display" class="result-box p-6 text-center flex flex-col justify-center items-center">
+            <p class="text-2xl font-semibold mb-1">Calculadora de IMC</p>
+            <p class="text-sm opacity-90">Preencha os campos abaixo para calcular seu Índice de Massa Corporal.</p>
+        </div>
+
+        <!-- 2. Formulário de Input e Tabela -->
+        <div class="p-6">
+            <h2 class="text-xl font-bold mb-6 text-gray-800">Seus Dados</h2>
+
+            <form id="imc-form" class="space-y-5">
+                
+                <!-- Linha 1: Sistema de Medida e Gênero -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Sistema de Medida -->
+                    <div class="input-group">
+                        <label class="block mb-2">Sistema</label>
+                        <div class="toggle-group flex space-x-3" id="system-toggle">
+                            <input type="radio" id="metric" name="system" value="metric" checked>
+                            <label for="metric">Métrico</label>
+                            
+                            <input type="radio" id="imperial" name="system" value="imperial">
+                            <label for="imperial">Imperial</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Gênero -->
+                    <div class="input-group">
+                        <label class="block mb-2">Gênero</label>
+                        <div class="toggle-group flex space-x-3" id="gender-toggle">
+                            <input type="radio" id="male" name="gender" value="male" checked>
+                            <label for="male">Masculino</label>
+                            
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Feminino</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linha 2: Idade, Peso e Altura -->
+                <div class="grid grid-cols-3 gap-4">
+                    <!-- Idade -->
+                    <div class="input-group col-span-3 sm:col-span-1">
+                        <label for="age" class="block mb-2">Idade</label>
+                        <!-- A idade é um campo de UX, mas o cálculo de IMC padrão é universal para adultos (18+) -->
+                        <input type="number" id="age" min="18" max="120" value="25" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2" style="--tw-ring-color: var(--color-current-accent);">
+                    </div>                      
+                    <!-- Peso -->
+                    <div class="input-group col-span-3 sm:col-span-1">
+                        <label for="weight" class="block mb-2">Peso</label>
+                        <div class="relative">
+                            <input type="number" id="weight" step="0.1" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2" style="--tw-ring-color: var(--color-current-accent);">
+                            <span id="weight-unit" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">kg</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Altura -->
+                    <div class="input-group col-span-3 sm:col-span-1">
+                        <label for="height" class="block mb-2">Altura</label>
+                        <div class="relative">
+                            <input type="number" id="height" step="1" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2" style="--tw-ring-color: var(--color-current-accent);">
+                            <span id="height-unit" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">cm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão de Calcular -->
+                <button type="submit" class="w-full p-3 rounded-lg text-white font-bold transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.01]">
+                    Calcular IMC
+                </button>
+            </form>
+
+            <!-- Tabela de Referência IMC (OMS Padrão) -->
+            <div id="imc-table" class="mt-8">
+                <h3 class="text-lg font-bold mb-3 text-gray-700">Tabela de Classificação</h3>
+                <div class="tabela-imc border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="tabela-item" data-category="abaixo">
+                        <span>Abaixo de 18,5</span>
+                        <span class="font-semibold">Abaixo do Peso</span>
+                    </div>
+                    <div class="tabela-item" data-category="saudavel">
+                        <span>18,5 a 24,9</span>
+                        <span class="font-semibold">Peso Saudável</span>
+                    </div>
+                    <div class="tabela-item" data-category="sobrepeso">
+                        <span>25,0 a 29,9</span>
+                        <span class="font-semibold">Sobrepeso</span>
+                    </div>
+                    <div class="tabela-item" data-category="obesidade1">
+                        <span>30,0 a 34,9</span>
+                        <span class="font-semibold">Obesidade Grau I</span>
+                    </div>
+                    <div class="tabela-item" data-category="obesidade2">
+                        <span>35,0 a 39,9</span>
+                        <span class="font-semibold">Obesidade Grau II</span>
+                    </div>
+                    <div class="tabela-item" data-category="obesidade3">
+                        <span>40,0 ou mais</span>
+                        <span class="font-semibold">Obesidade Grau III</span>
+                    </div>
+                </div>
+                <!-- NOVA REFERÊNCIA OMS -->
+                <p class="text-xs text-gray-500 mt-2 text-center">
+                    Fonte: Organização Mundial da Saúde (OMS). Classificação válida para adultos.
+                </p>
+            </div>
+
+            <!-- Mensagem de Erro/Disclaimer -->
+            <div id="message-box" class="mt-4 p-3 hidden" role="alert"></div>
+        </div>
+    </div>
+    
+    <!-- Assinatura da Desenvolvedora -->
+    <footer class="footer-signature">
+        Desenvolvido com carinho por: Gabriela Neves
+    </footer>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
