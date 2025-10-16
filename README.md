@@ -6,6 +6,8 @@ Essa é a **HealthCheck**, uma ferramenta simples, mas cheia de personalidade, q
 
 Aqui não tem segredo, só **HTML, CSS e JavaScript Vanilla**, tudo pensado para ser rápido, funcional e, o mais importante, **fácil de usar em qualquer tela**, do celular ao desktop.
 
+![Calculadora de IMC](https://github.com/nevesgno/Calculadora-de-IMC/blob/main/Calculadora%20de%20IMC.png?raw=true)
+
 ---
 
 ## ✨ O que essa calculadora tem de especial?
