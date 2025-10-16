@@ -4,7 +4,7 @@ Olá! Cansado de calculadoras de IMC genéricas? Eu também! 😉
 
 Essa é a **HealthCheck**, uma ferramenta simples, mas cheia de personalidade, que criei para acompanhar a saúde de forma mais dinâmica e visualmente agradável.
 
-Aqui não tem segredo, só **HTML, CSS e JavaScript Vanilla**, tudo pensado para ser rápido, funcional e, o mais importante, **fácil de usar em qualquer tela**, do celular ao desktop.
+Aqui não tem segredo, só **HTML, CSS e JavaScript**, tudo pensado para ser rápido, funcional e, o mais importante, **fácil de usar em qualquer tela**, do celular ao desktop.
 
 ![Calculadora de IMC](https://github.com/nevesgno/Calculadora-de-IMC/blob/main/Calculadora%20de%20IMC.png?raw=true)
 
