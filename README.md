@@ -1,4 +1,4 @@
-# ⚖️ HealthCheck | Calculadora de IMC (Body Mass Index)
+# ⚖️ Calculadora de IMC 
 
 Olá! Cansado de calculadoras de IMC genéricas? Eu também! 😉
 
