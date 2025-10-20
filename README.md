@@ -53,9 +53,7 @@ Criar a **HealthCheck** me ajudou a reforçar a importância de:
 
 ---
 
-## 👋 Desenvolvido com carinho por
-
-**Gabriela Neves**  
+## 👋 Desenvolvido por **Gabriela Neves** @2025
 📍 Salvador - BA  
 💬 _“Projeto criado para praticar lógica, responsividade e boas práticas de código, mostrando que o essencial bem feito é o que realmente faz diferença.”_
 
